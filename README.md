@@ -49,7 +49,7 @@ Terms of Use:   https://zerotounicorn.com/terms.html
 Email confirmation and password-reset links hand off to the iOS app from these pages (not linked in the public nav):
 
 ```text
-Auth callback:  https://zerotounicorn.com/webauth-callback.html
+Auth callback:  https://zerotounicorn.com/auth-callback.html
 Password reset: https://zerotounicorn.com/auth-reset.html
 ```
 
@@ -59,7 +59,7 @@ Password reset: https://zerotounicorn.com/auth-reset.html
 - `support.html` — support / FAQ
 - `privacy.html` — privacy policy
 - `terms.html` — terms & conditions
-- `webauth-callback.html` — email confirmation handoff to the iOS app
+- `auth-callback.html` — email confirmation handoff to the iOS app
 - `auth-reset.html` — password-reset handoff to the iOS app
 - `styles.css` — shared styles
 - `icon.png` / `favicon.png` — app icon
