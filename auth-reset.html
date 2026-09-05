@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reset password — Zero to Unicorn</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .auth-card { max-width: 440px; margin: 72px auto; padding: 28px; background: var(--card); border: 1px solid var(--card-border); border-radius: var(--radius); }
+    .auth-card h1 { margin: 0 0 12px; font-size: 1.6rem; }
+    .auth-card p { color: var(--text-secondary); }
+    .auth-btn { display: inline-block; margin-top: 16px; background: var(--primary); color: #fff; font-weight: 700; padding: 14px 22px; border-radius: 12px; }
+    .auth-btn:hover { text-decoration: none; }
+    .auth-err { color: #fca5a5; }
+  </style>
+</head>
+<body>
+  <main class="auth-card">
+    <h1 id="heading">Opening Zero to Unicorn</h1>
+    <p id="msg">If the app does not open, tap the button below.</p>
+    <p><a class="auth-btn" id="open" href="zero-to-unicorn://reset-password">Open the game</a></p>
+  </main>
+  <script>
+    (function () {
+      var raw = (window.location.hash || "").replace(/^#/, "") || (window.location.search || "").replace(/^\?/, "");
+      var params = new URLSearchParams(raw);
+      var msg = document.getElementById("msg");
+      var heading = document.getElementById("heading");
+      var open = document.getElementById("open");
+      if (params.get("error")) {
+        heading.textContent = "This link did not work";
+        msg.textContent = params.get("error_description") || params.get("error");
+        msg.className = "auth-err";
+        open.style.display = "none";
+        return;
+      }
+      var access = params.get("access_token");
+      var refresh = params.get("refresh_token");
+      if (!access || !refresh) {
+        heading.textContent = "This reset link is incomplete";
+        msg.textContent = "Request a new reset link from the app, then open it on this iPhone.";
+        msg.className = "auth-err";
+        return;
+      }
+      var q = new URLSearchParams();
+      q.set("access_token", access);
+      q.set("refresh_token", refresh);
+      q.set("type", params.get("type") || "recovery");
+      var appUrl = "zero-to-unicorn://reset-password?" + q.toString();
+      open.href = appUrl;
+      window.location.replace(appUrl);
+    })();
+  </script>
+</body>
+</html>
