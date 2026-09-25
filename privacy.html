@@ -14,8 +14,8 @@
   <meta property="og:title" content="Privacy Policy — Zero to Unicorn">
   <meta property="og:description" content="How Zero to Unicorn handles personal data.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://zerotounicorn.com/privacy.html">
-  <meta property="og:image" content="https://zerotounicorn.com/icon.png">
+  <meta property="og:url" content="https://zerotounicorn.app/privacy.html">
+  <meta property="og:image" content="https://zerotounicorn.app/icon.png">
 </head>
 <body>
   <a class="skip" href="#content">Skip to content</a>
@@ -36,7 +36,7 @@
 
   <main id="content" class="legal-wrap">
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: August 23, 2026</p>
+    <p class="updated">Last updated: September 15, 2026</p>
     <p class="legal-disclaimer">This is the same policy as in the app, written for store listing URLs. It is not a substitute for professional legal advice.</p>
 
     <h2>1. Introduction</h2>
@@ -48,6 +48,8 @@
       <li>Username</li>
       <li>Email address</li>
       <li>Password (encrypted; we do not store it in plain text)</li>
+      <li>Name you share with Sign in with Apple</li>
+      <li>Sign in with Apple identity, if you use Apple to sign in</li>
     </ul>
 
     <h3>2.2 Game data</h3>
@@ -75,6 +77,9 @@
       <li>Advertising identifier, if you allow tracking for ads</li>
       <li>App version and settings</li>
     </ul>
+
+    <h3>2.5 Approximate country</h3>
+    <p>If you have not chosen a country, we ask <strong>ipapi.co</strong> once for the country associated with your current IP address. We store only the two-letter country code for regional leaderboards. We do not store your IP address. You can change your country in Settings.</p>
     <p>We do not require this website to collect personal data. If you email us, we will receive whatever you send.</p>
 
     <h2>3. How We Use Your Information</h2>
@@ -82,7 +87,9 @@
       <li>Provide and maintain the game</li>
       <li>Save progress across sessions and devices</li>
       <li>Authenticate your account</li>
+      <li>Send confirmation and password-reset emails</li>
       <li>Run social features you choose to use (friends, leaderboards, challenges)</li>
+      <li>Show regional leaderboards for your country</li>
       <li>Improve and debug the game</li>
       <li>Customer support</li>
       <li>Important service messages</li>
@@ -91,15 +98,18 @@
     </ul>
 
     <h2>4. Data Storage</h2>
-    <p>Account, game progress, and social data are stored in the cloud on <strong>Supabase</strong> (hosted in the <strong>EU</strong> for this project). Session tokens on iOS and Android are kept in the device keychain via Expo SecureStore. We do not send your gameplay to third-party large language model providers.</p>
+    <p>Account, game progress, and social data are stored in the cloud on <strong>Supabase</strong> (hosted in the <strong>EU</strong> for this project). Session tokens on device are kept in the device keychain via Expo SecureStore. We do not send your gameplay to third-party large language model providers.</p>
 
     <h2>5. Data Sharing and Disclosure</h2>
     <p>We do not sell your personal information. We share data only with processors needed to run the game:</p>
     <ul>
       <li><strong>Supabase</strong> — accounts, database, export, and deletion</li>
       <li><strong>Expo</strong> — app builds, updates, and push delivery</li>
+      <li><strong>Resend</strong> — confirmation and password-reset emails</li>
+      <li><strong>Apple</strong> — Sign in with Apple</li>
       <li><strong>RevenueCat</strong> — App Store in-app purchases</li>
       <li><strong>Google AdMob</strong> (Unity Ads via mediation) — rewarded ads</li>
+      <li><strong>ipapi.co</strong> — one-time country lookup from IP when country is unset</li>
       <li>With your explicit consent</li>
       <li>To comply with law</li>
       <li>To protect our rights and prevent fraud</li>
@@ -138,8 +148,8 @@
       <p class="footer-meta">
         <a href="mailto:contact@zerotounicorn.com">contact@zerotounicorn.com</a>
       </p>
-      <p class="footer-meta">© 2026 the developer of Zero to Unicorn · <a href="https://zerotounicorn.com">zerotounicorn.com</a></p>
-      <p class="placeholder-note">App Store link is a placeholder and will be updated at launch.</p>
+      <p class="footer-meta">© 2026 the developer of Zero to Unicorn · <a href="https://zerotounicorn.app">zerotounicorn.app</a></p>
+      <p class="placeholder-note">App Store link is a placeholder and will be updated at launch. Copy this file over the hosted <code>privacy.html</code> to publish.</p>
     </div>
   </footer>
 </body>
