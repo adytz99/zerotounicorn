@@ -33,7 +33,7 @@ Replace every `https://apps.apple.com/app/idXXXXXXXXX` with the real App Store U
 
 Search the site for `idXXXXXXXXX`.
 
-If the live domain is not `zerotounicorn.com`, update origin copy and Open Graph URLs. Leave `contact@zerotounicorn.com` unless that mailbox changes.
+If the live domain is not `zerotounicorn.com`, update origin copy and Open Graph URLs. Leave `contact@zerotounicorn.app` unless that mailbox changes.
 
 ## App Store Connect URLs
 
