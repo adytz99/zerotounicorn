@@ -38,6 +38,15 @@
       }
       var access = params.get("access_token");
       var refresh = params.get("refresh_token");
+      var tokenHash = params.get("token_hash");
+      if ((!access || !refresh) && tokenHash) {
+        var verify = new URL("https://owejbnvlunbrzkfcwzcz.supabase.co/auth/v1/verify");
+        verify.searchParams.set("token", tokenHash);
+        verify.searchParams.set("type", params.get("type") || "recovery");
+        verify.searchParams.set("redirect_to", "https://zerotounicorn.app/auth-reset.html");
+        window.location.replace(verify.toString());
+        return;
+      }
       if (!access || !refresh) {
         heading.textContent = "This reset link is incomplete";
         msg.textContent = "Request a new reset link from the app, then open it on this iPhone.";
